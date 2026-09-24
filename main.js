@@ -80,7 +80,6 @@ const bookingSuccess = document.getElementById('bookingSuccess');
 const bookingSummary = document.getElementById('bookingSummary');
 
 if (bookingForm) {
-  // Set minimum date to today
   const dateInput = document.getElementById('bookingDate');
   if (dateInput) {
     const today = new Date().toISOString().split('T')[0];
