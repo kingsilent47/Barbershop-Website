@@ -1,0 +1,189 @@
+<!-- Head and Header remain identical -->
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book an Appointment | Iron & Comb Barbershop</title>
+  <meta name="description" content="Book a haircut, fade, beard trim or shave at Iron & Comb Barbershop in Cape Town. Choose your service, barber, date and time.">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="logo" aria-label="Iron and Comb home">
+        <span class="logo-mark" aria-hidden="true"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect width="40" height="40" rx="2" fill="#2E4F3C"/><path d="M10 12 L20 28 L30 12" stroke="#F9F9F9" stroke-width="2.5" fill="none" stroke-linecap="square"/><line x1="10" y1="20" x2="30" y2="20" stroke="#8A7336" stroke-width="2"/></svg></span>
+        <span class="logo-text">Iron &amp; Comb</span>
+      </a>
+      <nav class="main-nav" aria-label="Primary"><ul><li><a href="/">Home</a></li><li><a href="/services.html">Services</a></li><li><a href="/about.html">About</a></li><li><a href="/booking.html">Booking</a></li><li><a href="/booking.html#contact">Contact</a></li></ul></nav>
+      <a href="/booking.html" class="btn header-cta">Book Now</a>
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="square"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section>
+      <div class="container">
+        <h1>Book an Appointment</h1>
+        <p>Choose your service, preferred barber, date and time. You will receive a confirmation and can add the appointment directly to your calendar.</p>
+
+        <div class="booking-layout">
+          <form class="booking-form" id="bookingForm" novalidate>
+            <!-- Form fields remain identical to previous version -->
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First name</label>
+                <input type="text" id="firstName" name="firstName" required autocomplete="given-name">
+                <div class="form-error" id="error-firstName" role="alert"></div>
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last name</label>
+                <input type="text" id="lastName" name="lastName" required autocomplete="family-name">
+                <div class="form-error" id="error-lastName" role="alert"></div>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" id="email" name="email" required autocomplete="email">
+                <div class="form-error" id="error-email" role="alert"></div>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone number</label>
+                <input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="+27 82 123 4567">
+                <div class="form-error" id="error-phone" role="alert"></div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="service">Service</label>
+              <select id="service" name="service" required>
+                <option value="">Select a service</option>
+                <option value="classic">Classic Haircut (R250)</option>
+                <option value="fade">Skin Fade (R300)</option>
+                <option value="beard">Beard Trim (R150)</option>
+                <option value="shave">Hot Towel Shave (R350)</option>
+                <option value="kids">Kids Cut (R180)</option>
+                <option value="full">The Full Service (R550)</option>
+              </select>
+              <div class="form-error" id="error-service" role="alert"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="barber">Barber preference</label>
+              <select id="barber" name="barber">
+                <option value="no-preference">No preference (first available)</option>
+                <option value="marcus">Marcus Cole</option>
+                <option value="elena">Elena Rostova</option>
+                <option value="david">David Okafor</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="bookingDate">Date</label>
+                <input type="date" id="bookingDate" name="date" required>
+                <div class="form-error" id="error-date" role="alert"></div>
+              </div>
+              <div class="form-group">
+                <label for="bookingTime">Time</label>
+                <select id="bookingTime" name="time" required>
+                  <option value="">Select a time</option>
+                  <option value="09:00">9:00 AM</option>
+                  <option value="09:45">9:45 AM</option>
+                  <option value="10:30">10:30 AM</option>
+                  <option value="11:15">11:15 AM</option>
+                  <option value="12:00">12:00 PM</option>
+                  <option value="13:00">1:00 PM</option>
+                  <option value="13:45">1:45 PM</option>
+                  <option value="14:30">2:30 PM</option>
+                  <option value="15:15">3:15 PM</option>
+                  <option value="16:00">4:00 PM</option>
+                  <option value="16:45">4:45 PM</option>
+                </select>
+                <div class="form-error" id="error-time" role="alert"></div>
+              </div>
+            </div>
+
+            <div class="form-consent">
+              <input type="checkbox" id="termsConsent" name="consent" required>
+              <label for="termsConsent">
+                I agree to the <a href="/terms.html" target="_blank" rel="noopener">Terms and Conditions</a> and
+                <a href="/privacy.html" target="_blank" rel="noopener">Privacy Policy</a>. I consent to being contacted regarding my appointment.
+              </label>
+            </div>
+            <div class="form-error" id="error-consent" role="alert"></div>
+
+            <button type="submit" class="btn">Confirm Booking</button>
+          </form>
+
+          <aside class="booking-info" id="contact">
+            <h3>Shop information</h3>
+            <ul>
+              <li><strong>Address:</strong> 123 Bree Street, Cape Town, 8001, South Africa</li>
+              <li><strong>Phone:</strong> +27 21 123 4567</li>
+              <li><strong>Email:</strong> hello@ironandcomb.co.za</li>
+              <li><strong>Hours:</strong> Tuesday to Friday, 9:00 AM to 6:00 PM</li>
+              <li><strong>Saturday:</strong> 9:00 AM to 5:00 PM</li>
+              <li><strong>Closed:</strong> Sunday and Monday</li>
+            </ul>
+            <h3 style="margin-top: 1.5rem;">Good to know</h3>
+            <ul>
+              <li>Payment is collected in person. We accept cash, card and mobile payments.</li>
+              <li>Please arrive 5 minutes before your appointment.</li>
+              <li>Cancellations require 24 hours notice.</li>
+              <li>Walk-ins are welcome when availability allows.</li>
+            </ul>
+          </aside>
+        </div>
+
+        <div class="booking-success" id="bookingSuccess">
+          <h2>Booking confirmed</h2>
+          <p>Thank you. Your appointment details are below. You can add them to your calendar using the button.</p>
+          <div class="booking-summary" id="bookingSummary"></div>
+          <button type="button" class="btn" id="downloadCalendar">Add to Calendar</button>
+          <p style="margin-top: 1.5rem;"><a href="/">Return to homepage</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer, Modal, and Cookie Banner identical to index.html -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div><h4>Iron &amp; Comb</h4><p>123 Bree Street<br>Cape Town, 8001<br>South Africa</p><p>+27 21 123 4567<br>hello@ironandcomb.co.za</p></div>
+        <div><h4>Hours</h4><p>Tuesday to Friday: 9:00 AM to 6:00 PM<br>Saturday: 9:00 AM to 5:00 PM<br>Sunday and Monday: Closed</p></div>
+        <div><h4>Navigation</h4><ul><li><a href="/">Home</a></li><li><a href="/services.html">Services</a></li><li><a href="/about.html">About</a></li><li><a href="/booking.html">Book Appointment</a></li></ul></div>
+        <div><h4>Legal</h4><ul><li><a href="/privacy.html">Privacy Policy</a></li><li><a href="/terms.html">Terms and Conditions</a></li><li><a href="/cookies.html">Cookie Policy</a></li><li><a href="/refunds.html">Refund Policy</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; <span id="year"></span> Iron &amp; Comb Barbershop. All rights reserved.</p><p>Photography sourced from Unsplash under the Unsplash License.</p></div>
+    </div>
+  </footer>
+
+  <div class="modal-overlay" id="promoModal" role="dialog" aria-modal="true" aria-labelledby="promoTitle">
+    <div class="modal">
+      <button class="modal-close" id="modalClose" aria-label="Close promotion">&times;</button>
+      <h2 id="promoTitle">First visit with us?</h2>
+      <p>Mention this page when you arrive and receive a complimentary hot towel with any haircut or shave.</p>
+      <a href="/booking.html" class="btn">Book Your Appointment</a>
+    </div>
+  </div>
+
+  <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent">
+    <p>We use strictly necessary cookies to operate this site. You can read more in our <a href="/cookies.html">Cookie Policy</a>.</p>
+    <div class="cookie-actions">
+      <button class="btn" id="cookieAccept">Accept</button>
+      <button class="btn btn-secondary" id="cookieDecline">Decline</button>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
